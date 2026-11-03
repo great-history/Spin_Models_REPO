@@ -1,0 +1,44 @@
+{
+  "Nx": 52,
+  "Ny": 30,
+  "Ns": 4,
+  "geometry": "rectangular",
+  "exchange": [
+    -3.8,
+    0.2,
+    13.8
+  ],
+  "in-plane anisotropy": [
+    -0.3,
+    0.0,
+    6
+  ],
+  "seed": 265933570515511307648612652920679749236,
+  "num_eq_sweeps": 15000,
+  "converg_per_every": 10,
+  "num_meas_sweeps": 5000,
+  "meas_per_every": 5,
+  "temperatures_info": [
+    [
+      200,
+      150,
+      75
+    ],
+    [
+      150,
+      75,
+      1
+    ],
+    [
+      "linear",
+      "geometric",
+      "geometric"
+    ],
+    [
+      10,
+      0.95,
+      0.8
+    ]
+  ],
+  "reset_probability": 0.02
+}
