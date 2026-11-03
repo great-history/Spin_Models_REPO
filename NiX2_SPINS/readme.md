@@ -43,13 +43,45 @@ Available observables include:
 
 The following simulation illustrates the temperature dependence of the polarization components alongside the heat capacity. The loss of polarization occurs near a pronounced heat-capacity peak in this parameter set.
 
-![Electric polarization and heat capacity versus temperature](nix2_simulation_results/NiX2_polarization__20261102_112650_949591/polarization_vs_temperature.png)
+| Electric polarization and heat capacity | Final MC spin configuration at 1 K |
+| :---: | :---: |
+| <img src="nix2_simulation_results/NiX2_polarization__20261102_112650_949591/polarization_vs_temperature.png" alt="Electric polarization and heat capacity versus temperature" width="480"> | <img src="nix2_simulation_results/NiX2_polarization__20261102_112650_949591/final_spin_config_after_llg.png" alt="Final MC spin configuration at 1 K" width="480"> |
+
+Model and geometry parameters from the [saved metadata](nix2_simulation_results/NiX2_polarization__20261102_112650_949591/parameters.json):
+
+| Parameter | Value |
+| --- | --- |
+| Model | Mini model |
+| Lattice geometry | Triangular |
+| Size, Nx x Ny x Ns | 32 x 32 x 1 (1,024 spins) |
+| J1 tensor, rows in XYZ order (meV) | `[[-8.0, 0, 0], [0, -5.6, -1.4], [0, -1.4, -7.3]]` |
+| J2iso (meV) | 0 |
+| J3 (meV) | 5.8 |
+| Azz (meV) | 4.2 |
+| Biquadratic coupling (meV) | 0 |
+| External field, (Bx, By, Bz) (T) | (0, 0, 0) |
 
 ### Topological charge
 
 A separate parameter set produces a finite low-temperature topological charge that decreases as temperature rises. The figure uses the magnetic-unit-cell normalization defined in the corresponding notebook.
 
-![Topological charge versus temperature](nix2_simulation_results/NiX2_topological_charge__20261102_194403_873631/topoQ_vs_temperature.png)
+| Topological charge and susceptibility | Final MC spin configuration at 1 K |
+| :---: | :---: |
+| <img src="nix2_simulation_results/NiX2_topological_charge__20261103_113734_413179/topoQ_vs_temperature.png" alt="Topological charge and susceptibility versus temperature" width="480"> | <img src="nix2_simulation_results/NiX2_topological_charge__20261103_113734_413179/final_spin_config_after_llg.png" alt="Final MC spin configuration at 1 K" width="480"> |
+
+Model and geometry parameters from the [saved metadata](nix2_simulation_results/NiX2_topological_charge__20261103_113734_413179/parameters.json):
+
+| Parameter | Value |
+| --- | --- |
+| Model | Mini model |
+| Lattice geometry | Triangular |
+| Size, Nx x Ny x Ns | 48 x 48 x 1 (2,304 spins) |
+| J1 tensor, rows in XYZ order (meV) | `[[-8.0, 0, 0], [0, -5.6, -1.4], [0, -1.4, -7.3]]` |
+| J2iso (meV) | 0 |
+| J3 (meV) | 5.8 |
+| Azz (meV) | 0.6 |
+| Biquadratic coupling (meV) | 0 |
+| External field, (Bx, By, Bz) (T) | (0, 0, 0) |
 
 ## Proper-screw magnetic order
 

@@ -1,0 +1,70 @@
+{
+  "Nx": 48,
+  "Ny": 48,
+  "Ns": 1,
+  "geometry": "triangular",
+  "model_params": {
+    "J1mat": [
+      [
+        -8.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -5.6,
+        -1.4
+      ],
+      [
+        0.0,
+        -1.4,
+        -7.3
+      ]
+    ],
+    "J2iso": 0.0,
+    "J3": 5.8,
+    "Azz": 0.6,
+    "B_biquad": 0.0,
+    "B_field": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "seed": 146688007996596614641872292529227191226,
+  "num_eq_sweeps": 20000,
+  "converg_per_every": 10,
+  "num_meas_sweeps": 40000,
+  "meas_per_every": 4,
+  "temperatures_info": [
+    [
+      69,
+      50,
+      19
+    ],
+    [
+      51,
+      19,
+      1
+    ],
+    [
+      "linear",
+      "linear",
+      "linear"
+    ],
+    [
+      10,
+      32,
+      10
+    ]
+  ],
+  "observables": [
+    "Q",
+    "chi",
+    "P",
+    "M",
+    "E",
+    "Cv"
+  ],
+  "reset_probability": 0.02
+}

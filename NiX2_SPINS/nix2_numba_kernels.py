@@ -186,9 +186,10 @@ def _topological_charge_triangular_lattice(spin_config, Nx, Ny):
             s01 = spin_config[x, yp, 0]
             s11 = spin_config[xp, yp, 0]
 
-            # triangular unit cell has two plaquettes
-            angle1 = solid_angle(s00, s10, s01)
-            angle2 = solid_angle(s10, s11, s01)
+            # 120-degree basis: the nearest-neighbor diagonal is s00--s11.
+            # Both elementary triangles are counterclockwise in real space.
+            angle1 = solid_angle(s00, s10, s11)
+            angle2 = solid_angle(s00, s11, s01)
             q += angle1
             q += angle2
 

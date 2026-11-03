@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from matplotlib.collections import LineCollection
 from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.tri import Triangulation, UniformTriRefiner, LinearTriInterpolator
+from mpl_toolkits.axes_grid1 import make_axes_locatable
 import numpy as np
 
 # Default appearance. Importing this module does not change Matplotlib settings.
@@ -130,7 +131,8 @@ def plot_spin_texture(
     ax.set(xlim=xlim, ylim=ylim, aspect="equal", title=title,
            xlabel="x (lattice units)", ylabel="y (lattice units)")
     if colorbar:
-        cbar = ax.figure.colorbar(background, ax=ax, shrink=0.8, pad=0.03)
+        cax = make_axes_locatable(ax).append_axes("right", size="3%", pad=0.12)
+        cbar = ax.figure.colorbar(background, cax=cax)
         cbar.set_label(r"$S_z$")
         cbar.set_ticks([-1, -0.5, 0, 0.5, 1])
     return ax
@@ -177,7 +179,8 @@ def plot_spin_angles(
     ax.set(xlim=xlim, ylim=ylim, aspect="equal", title=title,
            xlabel="x (lattice units)", ylabel="y (lattice units)")
     if colorbar:
-        cbar = ax.figure.colorbar(points, ax=ax, shrink=0.8, pad=0.03)
+        cax = make_axes_locatable(ax).append_axes("right", size="3%", pad=0.12)
+        cbar = ax.figure.colorbar(points, cax=cax)
         cbar.set_label(r"Spin angle $\phi$ (rad)")
         cbar.set_ticks([0, np.pi / 2, np.pi, 3 * np.pi / 2, 2 * np.pi])
         cbar.set_ticklabels(["0", r"$\pi/2$", r"$\pi$", r"$3\pi/2$", r"$2\pi$"])
