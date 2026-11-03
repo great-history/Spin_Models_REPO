@@ -138,6 +138,45 @@ def plot_spin_texture(
     return ax
 
 
+def plot_Sq(
+    qx, qy, S_q, *, figsize=None, cmap="inferno",
+    xlim=None, ylim=None, vmax=None, colorbar=True,
+    title="Final spin configuration", flag_show=True, save_path=None,
+):
+    """Plot S_q shaped (Nx, Ny) or (Nx, Ny, 3) on matching Cartesian qx, qy grids."""
+    sq = np.asarray(S_q)
+    component_resolved = sq.ndim == 3
+    maps = np.moveaxis(sq, -1, 0) if component_resolved else sq[None, ...]
+    labels = [r"$S_x(\mathbf{q})$", r"$S_y(\mathbf{q})$", r"$S_z(\mathbf{q})$"] if component_resolved else [r"$S(\mathbf{q})$"]
+    if figsize is None:
+        figsize = (16, 5) if component_resolved else (7, 6)
+    if vmax is None:
+        vmax = float(sq.max()) or 1.0
+    with plt.rc_context(PLOT_CONFIG):
+        fig, axes = plt.subplots(1, len(maps), figsize=figsize,
+                                 squeeze=False, sharey=True, constrained_layout=True)
+        for ax, values, label in zip(axes.flat, maps, labels):
+            background = ax.pcolormesh(qx, qy, values, shading="auto",
+                                       cmap=cmap, vmin=0, vmax=vmax)
+            ax.set(aspect="equal", title=label, xlim=xlim, ylim=ylim,
+                   xlabel=r"$q_x$ (inverse lattice units)")
+            if ax is not axes[0, 0]:
+                ax.tick_params(axis="y", left=False, labelleft=False)
+        axes[0, 0].set_ylabel(r"$q_y$ (inverse lattice units)")
+        if colorbar:
+            cax = axes[0, -1].inset_axes([1.04, 0, 0.03, 1])
+            colorbar_label = r"$S_\alpha(\mathbf{q})$" if component_resolved else labels[0]
+            fig.colorbar(background, cax=cax, label=colorbar_label)
+        fig.suptitle(title)
+        if save_path is not None:
+            path = Path(save_path)
+            path.parent.mkdir(parents=True, exist_ok=True)
+            fig.savefig(path, bbox_inches="tight")
+        if flag_show:
+            plt.show()
+    return fig, axes.ravel()
+
+
 def plot_spin_angles(
     spins, lattice, ax=None, title="Spin-angle map",
     xlim=None, ylim=None, neighbors=None, figsize=(7, 6),

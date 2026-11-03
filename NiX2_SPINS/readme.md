@@ -87,6 +87,35 @@ Model and geometry parameters from the [saved metadata](nix2_simulation_results/
 
 Within suitable parameter regions, the simulations can produce **proper-screw order**. This magnetic state is closely related to the NiI2 physics investigated in [*Giant chiral magnetoelectric oscillations in a van der Waals multiferroic*, Nature (2024)](https://www.nature.com/articles/s41586-024-07678-5), which also considers excitations in a 7 x 1 magnetic supercell.
 
+### Simulated domains and spin structure factor
+
+The following JKJ3B result shows the final spin configuration after LLG relaxation and its component-resolved structure factor (see [model parameters](nix2_simulation_results/NiX2_JKJ3B_proper_screw_order__20261103_134444_352647/parameters.json)).
+
+<p align="center">
+  <img src="nix2_simulation_results/NiX2_JKJ3B_proper_screw_order__20261103_134444_352647/final_spin_config_after_llg.png" alt="JKJ3B spin configuration after LLG relaxation" width="300">
+</p>
+<p align="center">
+  <img src="nix2_simulation_results/NiX2_JKJ3B_proper_screw_order__20261103_134444_352647/final_spin_structure_factor_after_llg.png" alt="XYZ spin structure factors after LLG relaxation" width="760">
+</p>
+
+For Cartesian peak coordinates in units of $a^{-1}$, the spiral period along the propagation direction is
+
+$$
+\frac{\lambda}{a}=\frac{2\pi}{\sqrt{(a q_x)^2+(a q_y)^2}}.
+$$
+
+Here, $a$ is the nearest-neighbor distance; the lattice-vector lengths and angles are already included in the conversion to Cartesian wave vectors. Selected peak positions from the notebook are listed below; the corresponding negative wave vectors give the same periods.
+
+| $a q_x$ | $a q_y$ | $\lambda/a$ |
+| ---: | ---: | ---: |
+| 0.647785 | 0.560999 | 7.33 |
+| 0.518228 | 0.673198 | 7.40 |
+| 0.388671 | 0.785398 | 7.17 |
+| 0.388671 | 0.897598 | 6.42 |
+
+The first three peaks indicate periods close to seven nearest-neighbor spacings. The texture contains several domains and curved stripes rather than a uniform seven-site spiral. These periods support a near-seven-site spiral length scale, but identifying proper-screw order also requires checking the local spin-rotation plane relative to the propagation direction.
+
+## 7 x 1 magnetic unit cell relaxation
 For the commensurate configuration studied here, the order is described using a **7 x 1 magnetic unit cell containing seven spins**. The figure below shows the spin orientations from our best simulation result to date. Black arrows represent the XY projections, site colors indicate Sz, and the lower panel shows all three spin components across the magnetic unit cell.
 
 ![Seven-spin magnetic unit cell of the simulated proper-screw order](Figures_NiX2/proper_screw_order_muc.png)
