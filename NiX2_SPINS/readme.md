@@ -49,6 +49,7 @@ The following simulation illustrates the temperature dependence of the polarizat
 
 Model and geometry parameters from the [saved metadata](nix2_simulation_results/NiX2_polarization__20261102_112650_949591/parameters.json):
 
+<div align="center" style="display: flex; justify-content: center;">
 | Parameter | Value |
 | --- | --- |
 | Model | Mini model |
@@ -60,6 +61,7 @@ Model and geometry parameters from the [saved metadata](nix2_simulation_results/
 | Azz (meV) | 4.2 |
 | Biquadratic coupling (meV) | 0 |
 | External field, (Bx, By, Bz) (T) | (0, 0, 0) |
+</div>
 
 ### Topological charge
 
@@ -71,6 +73,8 @@ A separate parameter set produces a finite low-temperature topological charge th
 
 Model and geometry parameters from the [saved metadata](nix2_simulation_results/NiX2_topological_charge__20261103_113734_413179/parameters.json):
 
+
+<div align="center" style="display: flex; justify-content: center;">
 | Parameter | Value |
 | --- | --- |
 | Model | Mini model |
@@ -82,6 +86,7 @@ Model and geometry parameters from the [saved metadata](nix2_simulation_results/
 | Azz (meV) | 0.6 |
 | Biquadratic coupling (meV) | 0 |
 | External field, (Bx, By, Bz) (T) | (0, 0, 0) |
+</div>
 
 ## Proper-screw magnetic order
 
@@ -106,6 +111,8 @@ $$
 
 Here, $a$ is the nearest-neighbor distance; the lattice-vector lengths and angles are already included in the conversion to Cartesian wave vectors. Selected peak positions from the notebook are listed below; the corresponding negative wave vectors give the same periods.
 
+<div align="center" style="display: flex; justify-content: center;">
+
 | $a q_x$ | $a q_y$ | $\lambda/a$ |
 | ---: | ---: | ---: |
 | 0.647785 | 0.560999 | 7.33 |
@@ -113,18 +120,22 @@ Here, $a$ is the nearest-neighbor distance; the lattice-vector lengths and angle
 | 0.388671 | 0.785398 | 7.17 |
 | 0.388671 | 0.897598 | 6.42 |
 
+</div>
 The first three peaks indicate periods close to seven nearest-neighbor spacings. The texture contains several domains and curved stripes rather than a uniform seven-site spiral. These periods support a near-seven-site spiral length scale, but identifying proper-screw order also requires checking the local spin-rotation plane relative to the propagation direction.
 
 ## 7 x 1 magnetic unit cell relaxation
 For the commensurate configuration studied here, the order is described using a **7 x 1 magnetic unit cell containing seven spins**. The figure below shows the spin orientations from our best simulation result to date. Black arrows represent the XY projections, site colors indicate Sz, and the lower panel shows all three spin components across the magnetic unit cell.
 
-![Seven-spin magnetic unit cell of the simulated proper-screw order](Figures_NiX2/proper_screw_order_muc.png)
-
+<p align="center">
+  <img src="Figures_NiX2/proper_screw_order_muc.png" alt="Seven-spin magnetic unit cell of the simulated proper-screw order" width="760">
+</p>
 ## Magnon spectra above the proper-screw state
 
 Using the relaxed proper-screw configuration as the reference state, we can calculate the magnon spectrum of the JKJ3B model. The example below shows the excitation energies along the K-Gamma-M-K path in reciprocal space.
 
-![JKJ3B model magnon spectrum above the proper-screw state](Figures_NiX2/JKJ3B_model_magnon_spectra.png)
+<p align="center">
+  <img src="Figures_NiX2/JKJ3B_model_magnon_spectra.png" alt="JKJ3B model magnon spectrum above the proper-screw state" width="600">
+</p>
 
 These figures are simulation results from this repository, rather than reproductions of the figures in the cited papers.
 
