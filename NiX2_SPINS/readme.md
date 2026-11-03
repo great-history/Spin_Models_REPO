@@ -50,6 +50,7 @@ The following simulation illustrates the temperature dependence of the polarizat
 Model and geometry parameters from the [saved metadata](nix2_simulation_results/NiX2_polarization__20261102_112650_949591/parameters.json):
 
 <div align="center" style="display: flex; justify-content: center;">
+
 | Parameter | Value |
 | --- | --- |
 | Model | Mini model |
@@ -61,6 +62,7 @@ Model and geometry parameters from the [saved metadata](nix2_simulation_results/
 | Azz (meV) | 4.2 |
 | Biquadratic coupling (meV) | 0 |
 | External field, (Bx, By, Bz) (T) | (0, 0, 0) |
+
 </div>
 
 ### Topological charge
@@ -75,6 +77,7 @@ Model and geometry parameters from the [saved metadata](nix2_simulation_results/
 
 
 <div align="center" style="display: flex; justify-content: center;">
+
 | Parameter | Value |
 | --- | --- |
 | Model | Mini model |
@@ -86,6 +89,7 @@ Model and geometry parameters from the [saved metadata](nix2_simulation_results/
 | Azz (meV) | 0.6 |
 | Biquadratic coupling (meV) | 0 |
 | External field, (Bx, By, Bz) (T) | (0, 0, 0) |
+
 </div>
 
 ## Proper-screw magnetic order
